@@ -178,7 +178,7 @@ h4 {
   font-size: 5rem;
   font-weight: 100;
   color: #fff;
-
+  font-style: italic;
 }
 
 .portada-p {
@@ -356,7 +356,7 @@ h4 {
   margin-bottom: 2rem;
 }
 
-.redes a{
+.redes a {
   display: inline-flex;
   width: 0.5rem;
   height: 0.5rem;
@@ -386,7 +386,7 @@ h4 {
 
 .nosotros {
   background-color: bisque;
-  padding: 2rem 0 0; 
+  padding: 2rem 0 0;
 }
 
 .nosotros-imagen {
@@ -416,7 +416,7 @@ h4 {
 }
 
 
-.nosotros-img-3 { 
+.nosotros-img-3 {
   width: 66%;
   height: 100%;
   object-fit: cover;
@@ -594,14 +594,14 @@ h4 {
   grid-column: 2;
   grid-row: 1;
   background-color: #fffde8;
-  
+
 }
 
 .right-s-2 p {
   font-size: 1.2rem;
   font-family: "Montserrat-bold";
   margin: auto;
-  
+
 }
 
 .container-fluid-5 {
@@ -622,7 +622,7 @@ h4 {
   margin: 0 0 3rem;
 }
 
-.btn-reservas{
+.btn-reservas {
   margin-top: 0.8rem;
 }
 
@@ -734,12 +734,12 @@ h4 {
 /*-----breakpoints-----*/
 
 @media screen and (min-width: 1200px) {
-  
+
   .carousel-image {
     height: 35rem;
     width: 100%;
   }
-  
+
   .nosotros-imagen {
     width: 60%;
     height: 32rem;
@@ -897,7 +897,7 @@ h4 {
   .right:nth-child(2) {
     order: 1;
   }
-  
+
   .h2-titulo {
     font-family: "Montserrat-bold";
     font-weight: 600;
@@ -978,12 +978,23 @@ h4 {
   .portada-h4 {
     font-size: 3rem;
     margin-top: 7rem;
-    font-weight: 200;
+    font-family: Cambria, "Cochin", Georgia, Times, Times New Roman, serif;
+    font-style: italic;
   }
 
   .portada-p {
     font-size: 2rem;
     margin-top: 7rem;
+  }
+
+  .h1-p {
+    font-style: italic;
+    font-family: Cambria, "Cochin", Georgia, Times, Times New Roman, serif;
+  }
+
+  .h2-titulo {
+    font-style: italic;
+    font-family: Cambria, "Cochin", Georgia, Times, Times New Roman, serif;
   }
 
   .pedidos {
