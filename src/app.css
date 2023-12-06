@@ -188,6 +188,8 @@ h4 {
   align-items: center;
   justify-content: center;
   margin-top: 7rem;
+  font-family: Cambria, "Cochin", Georgia, Times, Times New Roman, serif;
+  font-style: italic;
 }
 
 .container-fluid-2 {
@@ -985,6 +987,8 @@ h4 {
   .portada-p {
     font-size: 2rem;
     margin-top: 7rem;
+    font-family: Cambria, "Cochin", Georgia, Times, Times New Roman, serif;
+    font-style: italic;
   }
 
   .h1-p {
