@@ -119,7 +119,7 @@ const Reservas = () => {
                                             name="hora"
                                             onChange={handleChange}
                                             type="time"
-                                            placeholder=""
+                                            placeholder="Horario"
                                             className="form-control" />
                                     </div>
                                 </div>
