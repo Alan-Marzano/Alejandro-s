@@ -4,13 +4,14 @@ import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 const Presentación = () => {
+    
 
     const { ref, inView } = useInView();
     const animation = useAnimation(); 
 
     useEffect(() => {
-        console.log("use effect hook, inView = ", inView);
         if (inView) {
+            console.log("use effect hook, inView = ", inView);                                                                                                                
             animation.start({
                 y: 0,
                 opacity: 1,     

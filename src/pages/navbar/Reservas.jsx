@@ -106,7 +106,7 @@ const Reservas = () => {
                                         <input
                                             name="día"
                                             onChange={handleChange}
-                                            type="text"                                            
+                                            type="text"
                                             placeholder="dd/mm/aaaa"
                                             className="form-control" />
                                     </div>
@@ -117,7 +117,7 @@ const Reservas = () => {
                                     <div className="col-md-4">
                                         <input
                                             name="hora"
-                                            onChange={handleChange}                                            
+                                            onChange={handleChange}
                                             type="time"
                                             placeholder=""
                                             className="form-control" />
