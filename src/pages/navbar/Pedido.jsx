@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Pedido = () => {
     return (
-        <div className="container-fluid-13 pedidos">
+        <div className="container-fluid-7 pedidos">
 
             <p className="pedido-p">Tu lugar ideal para compartir</p>
             

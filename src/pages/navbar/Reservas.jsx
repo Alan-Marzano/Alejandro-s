@@ -1,6 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useRef, useState } from "react";
 
 const Reservas = () => {
+
+    const form = useRef();
 
     const [datos, setDatos] = useState({
         nombre:'',
@@ -21,22 +23,18 @@ const Reservas = () => {
 
     const enviarDatos = (event) => {  
         event.preventDefault();
-        alert('se ha enviado correctamente')
         console.log(datos)
+        form.current.reset();
     }
 
-    
     return (
         <div className="container-fluid-5">
             <h3 className="reservas-t">Reservas</h3>
-
             <Fragment>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="well well-sm">
-
-
-                            <form className="form-horizontal" method="post" onSubmit={enviarDatos}>
+                            <form className="form-horizontal" method="post" ref={form} onSubmit={enviarDatos}>
 
                                 <div className="form-group">
                                     <span className="col-md-1 col-md-offset-2 text-center"></span>
@@ -128,19 +126,15 @@ const Reservas = () => {
 
                                 <div className="form-group">
                                     <div className="col-md-1 text-center">
-                                        <button                                            
-                                            type="submit" className="btn btn-danger btn-md">Confirmar</button>
+                                        <button type="submit" className="btn btn-outline-light btn-reservas">Confirmar</button>
                                     </div>
                                 </div>
 
                             </form>
-
-
                         </div>
                     </div>
                 </div>
             </Fragment>
-
         </div>
     );
 }

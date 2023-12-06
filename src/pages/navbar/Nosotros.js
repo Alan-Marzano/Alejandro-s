@@ -1,12 +1,48 @@
 import React from "react";
-import Imagenes from "../../assets/Imagenes";
-
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 const Nosotros = () => {
+
+    const { ref: ref3, inView: inView3 } = useInView();
+    const animation = useAnimation();
+
+    useEffect(() => {
+        console.log("use effect hook, inView = ", inView3);
+        if (inView3) {
+            animation.start({
+                x: 0,
+                y: 0,
+                opacity: 1,
+                transition: { type: 'spring',duration: 4, delay: 0.25, ease: 'ease' }
+            });
+        }
+
+    }, [inView3]);
+
+
     return (
-        <div className="nosotros">
+        <div ref={ref3} className="nosotros">
             <h3 className="titulos">Nosotros</h3>
-            <img src={Imagenes.img3} className="nosotros-img"  alt="cocineros cocinando"/>
+            <div className="nosotros-imagen">
+                <motion.img initial={{ x: -20, y: -20, opacity: 0 }} animate={animation}
+                    src="chef1.jpg" className="nosotros-img" alt="imagen de chef y sus asistentes cocinando"></motion.img>
+ 
+                <motion.img initial={{ x: 20, y: -20, opacity: 0 }} animate={{x: 0, y: 0, opacity: 1,
+                    transition: { type: 'spring', duration: 4, delay: 0.50, ease: 'ease' }}}
+                    src="grupo.jpg" className="nosotros-img-2" alt="imagen de chef y sus asistentes cocinando"></motion.img>
+
+                <motion.img initial={{ x: 20, y: 20, opacity: 0 }} animate={{x: 0, y: 0, opacity: 1,
+                    transition: { type: 'spring',duration: 4, delay: 0.75, ease: 'ease' }}}
+                    src="cocineros.jpg" className="nosotros-img-3" alt="imagen de chef y sus asistentes cocinando"></motion.img>
+            
+                <motion.img initial={{ x: 20, y: 20, opacity: 0 }} animate={{x: 0, y: 0, opacity: 1,
+                    transition: { type: 'spring', duration: 4, delay: 1, ease: 'ease' }}}
+                    src="amigos.jpg" className="nosotros-img-4" alt="imagen de chef y sus asistentes cocinando"></motion.img>
+
+            </div>
+
             <h3 className="titulos-2">Nuestra historia</h3>
             <p className="nosotros-p">
                 Lorem ipsum esse occaecat aliquip anim fugiat ea laborum consequat aute proident. Elit sint ad tempor aliqua consectetur dolore exercitation. Sit velit cillum ad proident laborum eiusmod laborum ipsum. Mollit officia commodo sit consequat anim proident.
@@ -17,7 +53,7 @@ const Nosotros = () => {
 
                 Nulla dolore proident laborum incididunt dolore mollit ea culpa dolor quis sunt cupidatat in elit. Officia veniam cillum velit est excepteur nostrud non laboris ipsum nulla enim cupidatat nostrud. Culpa commodo adipisicing non ullamco nostrud culpa do ex ut incididunt minim elit enim elit. Reprehenderit labore laborum ipsum duis officia adipisicing deserunt eu in laboris. Lorem aliqua nulla sint qui aute do. Eu cillum commodo dolor aliqua aute elit eu irure amet esse ea. Id ea consectetur ad laborum dolore sint esse dolor.
             </p>
-        </div>
+        </div >
     );
 }
 
