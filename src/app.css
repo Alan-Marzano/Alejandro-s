@@ -183,7 +183,7 @@ h4 {
 
 .portada-p {
   font-size: 2.5rem;
-  color: rgb(225, 202, 202);
+  color: rgb(221, 206, 206);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1006,7 +1006,7 @@ h4 {
   }
 
   .pedido-p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .pedido-aquí {
